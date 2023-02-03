@@ -1,2 +1,10 @@
 # this-and-nested-functions
-Using this() keyword and nested functions 
+ 
+document.getElementById('myAJAXButton').onclick = function(){
+ var self = this;
+ makeAJAXRequest(function(result){
+ if (result) { // success
+ self.className = 'success';
+ }
+ })
+}
